@@ -5,6 +5,7 @@
     "bin/php-package"
   ],
   "type": "library",
+  "description": "",
   "autoload": {
     "psr-4": {
       "Hexlet\\Code\\": "src/"

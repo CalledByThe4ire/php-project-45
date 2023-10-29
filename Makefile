@@ -10,3 +10,9 @@ lint:
 
 lint-fix:
 	composer exec --verbose phpcbf -- --standard=PSR12 src tests
+
+validate:
+	composer validate
+
+brain-games:
+	./bin/brain-games
