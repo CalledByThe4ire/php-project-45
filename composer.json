@@ -7,15 +7,16 @@
   "type": "library",
   "description": "",
   "autoload": {
-    "psr-4": {
-      "Hexlet\\Code\\": "src/"
-    }
+    "files": [
+      "src/Cli.php"
+    ]
   },
   "require": {
     "tightenco/collect": "^9.33",
     "nesbot/carbon": "^2.64",
     "symfony/string": "^6.2",
-    "phpstan/phpstan": "^1.9.2"
+    "phpstan/phpstan": "^1.9.2",
+    "wp-cli/php-cli-tools": "^0.11.21"
   },
   "require-dev": {
     "psy/psysh": "@stable",
