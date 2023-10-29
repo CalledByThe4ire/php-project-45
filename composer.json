@@ -2,13 +2,15 @@
   "name": "hexlet/code",
   "license": "MIT",
   "bin": [
-    "bin/php-package"
+    "bin/brain-games",
+    "bin/brain-even"
   ],
   "type": "library",
   "description": "",
   "autoload": {
     "files": [
-      "src/Cli.php"
+      "src/Cli.php",
+      "src/IsEven.php"
     ]
   },
   "require": {
