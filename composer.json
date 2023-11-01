@@ -10,7 +10,8 @@
   "autoload": {
     "files": [
       "src/Cli.php",
-      "src/IsEven.php"
+      "src/Engine.php",
+      "src/Games/IsEven.php"
     ]
   },
   "require": {
