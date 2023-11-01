@@ -7,8 +7,8 @@ use function cli\prompt;
 
 function welcomeUserAndGetUserName()
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
+    line("Welcome to the Brain Games!");
+    $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
 
     return $name;

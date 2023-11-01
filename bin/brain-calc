@@ -12,9 +12,10 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Cli\welcomeUserAndGetUserName;
-use BrainGames\Games\IsEven;
+use function BrainGames\Engine\run;
+use BrainGames\Games\Calc;
 
 $userName = welcomeUserAndGetUserName();
-$rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+$rules = "What is the result of the expression?";
 
-IsEven\runIsEvenGame($userName, $rules);
+Calc\runCalculatorGame($userName, $rules);
