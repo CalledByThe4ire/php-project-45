@@ -2,9 +2,6 @@
 
 namespace BrainGames\Games\Calc;
 
-use function cli\line;
-use function BrainGames\Engine\run;
-
 function calc($operand1, $operand2, $operator)
 {
     switch ($operator) {
@@ -43,22 +40,4 @@ function getQuestions()
                 return $value;
         }
     }, $questions, array_keys($questions));
-}
-
-function runCalculatorGame($userName, $rules)
-{
-    line($rules);
-
-    [
-        "isWinner" => $isWinner,
-        "answer" => $answer,
-        "correctAnswer" => $correctAnswer
-    ] = run("calculator", getQuestions(), getCorrectAnswer());
-
-    if ($isWinner) {
-        line("Congratulations, %s!", $userName);
-    } else {
-        line("%s is wrong answer ;(. Correct answer was \"{$correctAnswer}\".", $answer);
-        line("Let's try again, %s!", $userName);
-    }
 }

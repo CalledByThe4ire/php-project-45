@@ -13,3 +13,19 @@ function welcomeUserAndGetUserName()
 
     return $name;
 }
+
+function printGameResults($userName, $results)
+{
+    [
+        "isWinner" => $isWinner,
+        "answer" => $answer,
+        "correctAnswer" => $correctAnswer,
+    ] = $results;
+
+    if ($isWinner) {
+        line("Congratulations, %s!", $userName);
+    } else {
+        line("%s is wrong answer ;(. Correct answer was \"{$correctAnswer}\".", $answer);
+        line("Let's try again, %s!", $userName);
+    }
+}

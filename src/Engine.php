@@ -14,12 +14,17 @@ function getQuestion($value, $type)
             [$operand1, $operand2, $operator] = $value;
 
             return "{$operand1} {$operator} {$operand2}";
+
+        case "gcd":
+            [$a, $b] = $value;
+
+            return "{$a} {$b}";
         default:
             return $value;
     }
 }
 
-function run($gameName, $questions, $validator)
+function makeGame($gameName, $questions, $validator)
 {
     foreach ($questions as $value) {
         $question = getQuestion($value, $gameName);

@@ -11,10 +11,16 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Cli\welcomeUserAndGetUserName;
-use BrainGames\Games\IsEven;
+use function cli\line;
 
-$userName = welcomeUserAndGetUserName();
+use BrainGames\Cli;
+use BrainGames\Games\IsEven;
+use BrainGames\Engine;
+
+$userName = Cli\welcomeUserAndGetUserName();
 $rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
-IsEven\runIsEvenGame($userName, $rules);
+line($rules);
+
+$results = Engine\makeGame("is-even", IsEven\getQuestions(), IsEven\getCorrectAnswer());
+Cli\printGameResults($userName, $results);

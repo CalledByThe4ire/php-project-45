@@ -15,15 +15,16 @@ use function cli\line;
 
 use BrainGames\Cli;
 use BrainGames\Engine;
-use BrainGames\Games\Calc;
-
-
-
+use BrainGames\Games\GreatestCommonDivisor;
 
 $userName = Cli\welcomeUserAndGetUserName();
-$rules = "What is the result of the expression?";
+$rules = "Find the greatest common divisor of given numbers.";
 
 line($rules);
 
-$results = Engine\makeGame("calculator", Calc\getQuestions(), Calc\getCorrectAnswer());
+$results = Engine\makeGame(
+    "gcd",
+    GreatestCommonDivisor\getQuestions(),
+    GreatestCommonDivisor\getCorrectAnswer()
+);
 Cli\printGameResults($userName, $results);
