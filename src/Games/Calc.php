@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Calc;
 
-function calc($operand1, $operand2, $operator)
+function calc(int $operand1, int $operand2, string $operator): mixed
 {
     switch ($operator) {
         case "+":
@@ -12,19 +12,20 @@ function calc($operand1, $operand2, $operator)
         case "*":
             return $operand1 * $operand2;
         default:
-            return;
+            return error_log("Unknown operator: {$operator}");
     }
 }
 
-function getCorrectAnswer()
+function getCorrectAnswer(): callable
 {
-    return function ($value) {
+    return function (array $value): int {
         [$operand1, $operand2, $operator] = $value;
+
         return calc($operand1, $operand2, $operator);
     };
 }
 
-function getQuestions()
+function getQuestions(): iterable
 {
     $questions = array_map(fn () => [mt_rand(1, 5), mt_rand(1, 5)], array_fill(0, 3, null));
 
