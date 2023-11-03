@@ -3,7 +3,11 @@
   "license": "MIT",
   "bin": [
     "bin/brain-games",
-    "bin/brain-even"
+    "bin/brain-even",
+    "bin/brain-prime",
+    "bin/brain-gcd",
+    "bin/brain-calc",
+    "bin/brain-progression"
   ],
   "type": "library",
   "description": "",
