@@ -9,7 +9,9 @@ function getQuestion($value, $type)
 {
     switch ($type) {
         case "is-even":
+        case "is-prime":
             return $value;
+
         case "calculator":
             [$operand1, $operand2, $operator] = $value;
 
@@ -19,6 +21,11 @@ function getQuestion($value, $type)
             [$a, $b] = $value;
 
             return "{$a} {$b}";
+
+        case "progression":
+            [$range, $key] = $value;
+
+            return implode(" ", array_map(fn ($k, $v) => $k === $key ? ".." : $v, array_keys($range), $range));
         default:
             return $value;
     }

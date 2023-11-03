@@ -13,7 +13,9 @@
       "src/Engine.php",
       "src/Games/IsEven.php",
       "src/Games/Calc.php",
-      "src/Games/GreatestCommonDivisor.php"
+      "src/Games/GreatestCommonDivisor.php",
+      "src/Games/Progression.php",
+      "src/Games/IsPrime.php"
     ]
   },
   "require": {
