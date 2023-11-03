@@ -2,10 +2,12 @@
 
 namespace BrainGames\Cli;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 use function cli\line;
 use function cli\prompt;
 
-function welcomeUserAndGetUserName()
+function welcomeUserAndGetUserName(): string
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -14,7 +16,7 @@ function welcomeUserAndGetUserName()
     return $name;
 }
 
-function printGameResults($userName, $results)
+function printGameResults(string $userName, array $results): void
 {
     [
         "isWinner" => $isWinner,

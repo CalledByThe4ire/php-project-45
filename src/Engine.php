@@ -2,10 +2,12 @@
 
 namespace BrainGames\Engine;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 use function cli\line;
 use function cli\prompt;
 
-function getQuestion($value, $type)
+function getQuestion(mixed $value, string $type): mixed
 {
     switch ($type) {
         case "is-even":
@@ -31,7 +33,7 @@ function getQuestion($value, $type)
     }
 }
 
-function makeGame($gameName, $questions, $validator)
+function makeGame(string $gameName, array $questions, callable $validator): array
 {
     foreach ($questions as $value) {
         $question = getQuestion($value, $gameName);

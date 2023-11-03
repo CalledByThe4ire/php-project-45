@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\IsEven;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 function isEven($number)
 {
     return $number % 2 === 0;

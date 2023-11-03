@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\GreatestCommonDivisor;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 function gcd(...$numbers)
 {
     $gcd = function ($a, $b) use (&$gcd) {

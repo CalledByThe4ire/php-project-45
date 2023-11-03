@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\IsPrime;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 function isPrime($n, $i = 2)
 {
     if ($n <= 2) {

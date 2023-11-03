@@ -2,6 +2,8 @@
 
 namespace BrainGames\Games\Progression;
 
+error_reporting(E_ALL & ~E_NOTICE);
+
 function getCorrectAnswer()
 {
     return function ($value) {
